@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+html, body{ 
+    background-color: hsl(0, 0%, 98%);
+    font-family: 'Inconsolata', monospace !important; 
+}
+
+.footer{
+    padding-bottom: 0rem;
+}

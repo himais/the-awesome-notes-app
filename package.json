@@ -1,6 +1,8 @@
 {
   "name": "the-awesome-notes-app",
   "version": "0.0.0",
+  "description": "This is my awesome notes app",
+  "author": "Maíra Tabata",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -19,6 +21,7 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "bulma": "^0.7.4",
     "core-js": "^2.5.4",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",

@@ -1,0 +1,17 @@
+<div class="card" [formGroup]="form">
+  <div class="card-content">
+    <textarea class="textarea" rows="5" formControlName="note">{{
+      note.text
+    }}</textarea>
+  </div>
+  <footer class="card-footer">
+    <p class="card-footer-item">
+      <span class="is-size-7 has-text-left">
+        Created on {{ note.creationDate }} by {{ note.creator }}
+      </span>
+      <span class="has-text-right has-text-primary delete-button" (click)="handleDeleteButtonClick()">
+        <i class="fas fa-trash"></i>
+      </span>
+    </p>
+  </footer>
+</div>

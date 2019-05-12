@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card-footer-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button{
+    cursor: pointer;
+}
+
+textarea,
+textarea:focus,
+textarea:hover {
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  resize: none;
+}

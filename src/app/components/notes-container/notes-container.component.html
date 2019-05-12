@@ -1,0 +1,8 @@
+<ng-container *ngIf="shouldShowNotes()">
+  <notes-list></notes-list>
+  <clear-notes></clear-notes>
+</ng-container>
+
+<ng-container *ngIf="!shouldShowNotes()">
+  <p class="has-text-grey-light has-text-centered">Nothing here :(</p>
+</ng-container>
