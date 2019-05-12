@@ -1,4 +1,12 @@
 # TheAwesomeNotesApp
+Create and store your awesome notes!
+
+### Features
+* Create a note
+* Edit a note
+* Delete a note
+* LocalStorage save
+* Clear all data
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
