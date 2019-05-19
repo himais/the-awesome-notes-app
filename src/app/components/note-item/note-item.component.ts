@@ -3,6 +3,7 @@ import { NoteModel } from "src/app/models/note.model";
 import { FormControl, FormGroup } from "@angular/forms";
 import { NoteService } from "src/app/services/note/note.service";
 import { Subscription } from "rxjs";
+import { MarkdownParser } from 'src/app/helpers/markdown-parser/markdown-parser.helper';
 
 @Component({
   selector: "note-item",
@@ -13,16 +14,24 @@ export class NoteItemComponent implements OnInit, OnDestroy {
   @Input() note: NoteModel;
   public form: FormGroup;
   public valueChanges: Subscription;
+  public isEditMode: boolean = false;
+  public textToDisplay: string;
 
   constructor(protected noteService: NoteService) {}
 
   ngOnInit() {
+    this.textToDisplay = MarkdownParser.transform(this.note.text);
     this.form = this.createFormGroup();
     this.valueChanges = this.listenToFormChanges();
+    console.log( this.textToDisplay)
   }
 
   ngOnDestroy() {
     this.valueChanges.unsubscribe();
+  }
+
+  public openEditMode(){
+    this.isEditMode = true;
   }
 
   /**

@@ -1,6 +1,8 @@
 <div class="card" [formGroup]="form">
   <div class="card-content">
-    <textarea class="textarea" rows="5" formControlName="note">{{
+    <div *ngIf="!isEditMode" [innerHTML]="textToDisplay" (click)="openEditMode()">
+    </div>
+    <textarea class="textarea" rows="5" formControlName="note" *ngIf="isEditMode">{{
       note.text
     }}</textarea>
   </div>
